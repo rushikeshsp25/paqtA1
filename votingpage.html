@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Voting Page</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="assets/css/layout.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	
+	<link href="https://fonts.googleapis.com/css?family=Poiret+One" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<body>
+	<div class="pageContainer">
+		<div class="navbar">
+			<a href="index.html"><img alt="Quantiphi logo" src="assets/img/logo.png"></a>
+		</div>
+		<div class="container-fluid">
+			<div class="row" style="margin-top: 30px; background: ">
+				<div class="col-md-8" style="background: ">
+					<p class="heading2" >Department: Facilities</p>
+					<p class="text" >Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+					<p class="text" style="margin-top: 30px;margin-bottom:0"><strong>Choose your mascot for this department</strong> (hover over each mascot to know it's meaning)</p>
+				</div>
+				<div class="col-md-4" id="dept" style="display: none">
+					
+							<a href="votingpage.html" class="button green_button disable_btn" id="next_dept">MOVE ON TO THE NEXT DEPARTMENT</a>	
+				</div>
+			</div>
+			<div class="row allmascots">
+				<div class="col-md-2 center">
+					<a class="mascot" href="javascript:go('oyster')" id="oyster">
+						<div class="tooltip">
+							<img src="assets/img/1.png" width="80%" class="">
+							<p class="text">World is my <strong>Oyster</strong></p>
+							<span class="tooltiptext">My work/the attributes initiative is not having direction and needs greater mentorship or leadership</span>
+						</div>
+					</a>
+				</div>
+				<div class="col-md-2 center">
+					<a class="mascot" href="javascript:go('cat')" id="cat">
+						<div class="tooltip">
+							<img src="assets/img/2.png" width="80%">
+							<p class="text"><strong>Cat's</strong> Meow</p>
+							<span class="tooltiptext">My work/the attributes initiative is not having direction and needs greater mentorship or leadership</span>
+						</div>  	
+					</a>
+				</div>
+				<div class="col-md-2 center">
+					<a class="mascot" href="javascript:go('whale')" id="whale">
+						<div class="tooltip">
+							<img src="assets/img/3.png" width="80%">
+							<p class="text"><strong>Whale</strong> of a time</p>
+							<span class="tooltiptext">My work/the attributes initiative is not having direction and needs greater mentorship or leadership</span>
+						</div>  
+					</a>
+				</div>
+				<div class="col-md-2 center">
+					<a class="mascot" href="javascript:go('elephant')" id="elephant">
+						<div class="tooltip">
+							<img src="assets/img/4.png" width="80%">
+							<p class="text"><strong>Elephant</strong> in the room</p>
+							<span class="tooltiptext">My work/the attributes initiative is not having direction and needs greater mentorship or leadership</span>
+						</div>      
+					</a>
+				</div>
+				<div class="col-md-2 center">
+					<a class="mascot" href="javascript:go('fish')" id="fish">
+						<div class="tooltip">
+							<img src="assets/img/5.png" width="80%">
+							<p class="text">Dead <strong>Fish</strong></p>
+							<span class="tooltiptext">My work/the attributes initiative is not having direction and needs greater mentorship or leadership</span>
+						</div>    
+					</a>
+				</div>
+				<div class="col-md-2 center">
+					<a class="mascot" href="javascript:go('goose')" id="goose">
+						<div class="tooltip">
+							<img src="assets/img/6.png" width="80%">
+							<p class="text">Wild <strong>Goose</strong> Chase</p>
+							<span class="tooltiptext">My work/the attributes initiative is not having direction and needs greater mentorship or leadership</span>
+						</div>  
+					</a>
+				</div>
+			</div>
+			
+			<div class="row" style="display: none" id="rating_form">
+					<form name="rate_form">
+				<div class="col-md-4">
+						
+					<p class="text"><strong>Overall Rating for Facilities</strong> (1- lowest, 5-highest)</p>
+					<div class="rating">
+						<label>
+							<input type="radio" name="stars" value="1" onKeyup="checkform()" />
+							<span class="icon">★</span>
+						</label>
+						<label>
+							<input type="radio" name="stars" value="2" onKeyup="checkform()" />
+							<span class="icon">★</span>
+							<span class="icon">★</span>
+						</label>
+						<label>
+							<input type="radio" name="stars" value="3" onKeyup="checkform()" />
+							<span class="icon">★</span>
+							<span class="icon">★</span>
+							<span class="icon">★</span>   
+						</label>
+						<label>
+							<input type="radio" name="stars" value="4" onKeyup="checkform()" />
+							<span class="icon">★</span>
+							<span class="icon">★</span>
+							<span class="icon">★</span>
+							<span class="icon">★</span>
+						</label>
+						<label>
+							<input type="radio" name="stars" value="5" onKeyup="checkform()" />
+							<span class="icon">★</span>
+							<span class="icon">★</span>
+							<span class="icon">★</span>
+							<span class="icon">★</span>
+							<span class="icon">★</span>
+						</label>
+					</div>
+					<p class="text"><strong>Share your reasons for selecting</strong><span id="mascottName"></span></p>
+					<label class="checkcontainer">Lorem ipsum dolor sit amet
+						<input type="checkbox" onKeyup="checkform()">
+						<span class="checkmark"></span>
+					</label>
+
+					<label class="checkcontainer">Lorem ipsum dolor sit amet
+						<input type="checkbox" onKeyup="checkform()">
+						<span class="checkmark"></span>
+					</label>
+
+					<label class="checkcontainer">Lorem ipsum dolor sit amet
+						<input type="checkbox" onKeyup="checkform()">
+						<span class="checkmark"></span>
+					</label>
+
+					<label class="checkcontainer">Lorem ipsum dolor sit amet
+						<input type="checkbox" onKeyup="checkform()">
+						<span class="checkmark"></span>
+					</label>
+				</div>
+			
+				<div class="col-md-4">
+					<p class="text"><strong>Any more reasons?</strong></p>
+					<textarea name="message" style="width:100%; height:300px;" onKeyup="checkform()"></textarea>
+				</div>
+				<div class="col-md-4">
+					<p class="text"><strong>Suggestions</strong></p>
+					<textarea name="message" style="width:100%; height:300px;" onKeyup="checkform()"></textarea>
+				</div>
+			</form>
+			</div>
+		
+		</div>
+	</body>
+	<script src="assets/js/main.js"></script>
+	</html>
